@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets//styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Tic Tac Toe - Mini Games | Aditya Bhujbal</title>
+</head>
+
+<body class="dark">
+    <header class="main-header">
+        <h1>Tic-Tac-Toe</h1>
+    </header>
+    <main id="mainContent">
+        <div class="main-player__info">
+            <form class="main-player__selection">
+                <div class="player__selections">
+                    <div class="form-group">
+                        <h3>Player 1's Info</h3>
+                        <div class="form-element">
+                            <label for="player_1_name">Name:</label>
+                            <input name="player_1_name" type="text" value="Player 1" id="player_1_name" />
+                        </div>
+                        <div class="form-element">
+                            <label for="player_1_symbol">Symbol:</label>
+                            <select name="player_1_symbol" id="player_1_symbol">
+                                <option value="cross" selected>Cross</option>
+                                <option value="circle">Circle</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>Player 2's Info</h3>
+                        <div class="form-element">
+                            <label for="player_2_name">Name:</label>
+                            <input name="player_2_name" type="text" value="Player 2" id="player_2_name" />
+                        </div>
+                        <div class="form-element">
+                            <label for="player_2_symbol">Symbol:</label>
+                            <select name="player_2_symbol" id="player_2_symbol">
+                                <option value="cross">Cross</option>
+                                <option value="circle" selected>Circle</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="start-game">Start the game!</button>
+            </form>
+
+
+        </div>
+        <div class="main-gameboard__wrapper" style="display: none;">
+            <div class="wrapper">
+                <div class="current-turn__info" style="display: none;">
+                    <h3>Player 1's turn</h3>
+                </div>
+                <div class="main-gameboard"></div>
+            </div>
+            <div class="main-game__turns">
+                <h2>Game Turns</h2>
+                <ol class="turns"></ol>
+            </div>
+        </div>
+        <dialog class="winner-dialog">
+            <header>
+                <h2>We have a Winner!!!🎉✨🎇</h2>
+            </header>
+            <main class="dialog-body">
+                <p class="winner-text"></p>
+            </main>
+            <footer>
+                <button type="button" class="reset-game">Play Again!</button>
+            </footer>
+        </dialog>
+    </main>
+    <script src="./assets/scripts/main.js" defer></script>
+</body>
+
+</html>
